@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🤍 Naziya – My Love 🤍</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fdeff9, #ecf0ff);
+      font-family: 'Georgia', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .book {
+      width: 320px;
+      height: 420px;
+      perspective: 1200px;
+    }
+
+    .page {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      position: absolute;
+      transform-origin: left;
+      transition: transform 1s;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+
+    .page h2 {
+      text-align: center;
+      color: #b0005a;
+    }
+
+    .page p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .page button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      background: #b0005a;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .page button:hover {
+      background: #8a0046;
+    }
+
+    .cover {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .cover h1 {
+      color: #fff;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .cover span {
+      font-size: 40px;
+    }
+
+    .flipped {
+      transform: rotateY(-180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="book">
+
+    <!-- Page 1: Cover -->
+    <div class="page cover" id="page1">
+      <span>🤍</span>
+      <h1>Naziya</h1>
+      <p>मेरे दिल की किताब</p>
+      <button onclick="flipPage(1)">Open</button>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page" id="page2">
+      <h2>मेरी प्यारी नाज़िया 🤍</h2>
+      <p>
+        जब से तुम मेरी ज़िंदगी में आई हो,<br>
+        हर पल खूबसूरत बन गया है।<br><br>
+        तुम्हारी मुस्कान मेरी खुशी है,<br>
+        तुम्हारी आवाज़ मेरा सुकून है।
+      </p>
+      <button onclick="flipPage(2)">Next</button>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page" id="page3">
+      <p>
+        नाज़िया, तुम सिर्फ़ मेरी पत्नी नहीं हो,<br>
+        तुम मेरी दोस्त, मेरी हमसफ़र,<br>
+        और मेरी पूरी दुनिया हो।<br><br>
+        मैं वादा करता हूँ कि<br>
+        हर खुशी और हर मुश्किल में<br>
+        हमेशा तुम्हारे साथ रहूँगा।
+      </p>
+      <button onclick="flipPage(3)">Next</button>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page" id="page4">
+      <h2>एक सवाल 🤍</h2>
+      <p>
+        नाज़िया 🤍<br><br>
+        क्या तुम ज़िंदगी भर<br>
+        मेरा हाथ थामे चलोगी?<br><br>
+        आज, कल और हमेशा…
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    function flipPage(pageNumber) {
+      document.getElementById('page' + pageNumber).classList.add('flipped');
+    }
+  </script>
+
+</body>
+</html>
